@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/sign_in_to_your_account"
+        android:textSize="@dimen/sp_18" />
+
+    <com.hieuminh.jobfinder.views.customs.EditView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:view_title="@string/email" />
+
+    <com.hieuminh.jobfinder.views.customs.EditView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:view_title="@string/password" />
+
+    <CheckBox
+        android:id="@+id/cbRememberMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:text="@string/remember_me" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@drawable/bg_border_common_button"
+        android:text="@string/sign_in"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="center_horizontal"
+        android:text="@string/forgot_the_password"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_first_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_weight="1"
+        android:background="@drawable/bg_border_12_radius"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingVertical="@dimen/dp_16"
+        android:textSize="@dimen/sp_20" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_second_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_weight="1"
+        android:background="@drawable/bg_border_12_radius"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingVertical="@dimen/dp_16"
+        android:textSize="@dimen/sp_20" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_third_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_weight="1"
+        android:background="@drawable/bg_border_12_radius"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingVertical="@dimen/dp_16"
+        android:textSize="@dimen/sp_20" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_fourth_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_8"
+        android:layout_weight="1"
+        android:background="@drawable/bg_border_12_radius"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="1"
+        android:paddingVertical="@dimen/dp_16"
+        android:textSize="@dimen/sp_20" />
+
+</LinearLayout>
