@@ -6,28 +6,40 @@
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable-v24/bg_background_error.xml" value="0.37864583333333335" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable-v24/bg_border_8_radius.xml" value="0.37864583333333335" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/bg_border_common_button.xml" value="0.37864583333333335" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/bg_border_common_selected.xml" value="0.28177083333333336" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/bg_border_cricle_icon.xml" value="0.3104166666666667" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/bg_border_icon.xml" value="0.37864583333333335" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/bg_border_input_data.xml" value="0.37864583333333335" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/bg_border_top_only.xml" value="0.3104166666666667" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_baseline_chevron_left_24.xml" value="0.37864583333333335" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.37864583333333335" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.28177083333333336" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_baseline_person_pin_24.xml" value="0.28177083333333336" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_facebook.xml" value="0.37864583333333335" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_job_finder.xml" value="0.37864583333333335" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_job_svgrepo_com.xml" value="0.28177083333333336" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2859375" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/activity_login.xml" value="0.3625" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/activity_main.xml" value="0.3625" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/activity_onboard.xml" value="0.25" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_forgot_password.xml" value="0.25" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_greet.xml" value="0.25" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_input_profile.xml" value="0.3625" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_login.xml" value="0.6" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_onboard.xml" value="0.25" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_onboarding.xml" value="0.25" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_reset_password.xml" value="0.2546875" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_rest_password.xml" value="0.3625" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_select_job.xml" value="0.3625" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/fragment_selected_role.xml" value="0.259963768115942" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/item_header_view.xml" value="0.3625" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/item_input_data.xml" value="0.3625" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/layout_error.xml" value="0.3625" />
         <entry key="..\:/projects/JobFinder2/app/src/main/res/layout/layout_input_code.xml" value="0.3625" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2859375" />
+        <entry key="..\:/projects/JobFinder2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3260416666666667" />
       </map>
     </option>
   </component>
