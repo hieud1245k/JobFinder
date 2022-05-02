@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/onboarding_nav"
-    app:startDestination="@id/selectedRoleFragment2">
+    app:startDestination="@id/onboardFragment">
     <fragment
         android:id="@+id/greetFragment2"
         android:name="com.hieuminh.jobfinder.views.fragments.GreetFragment"
@@ -26,9 +26,4 @@
         android:name="com.hieuminh.jobfinder.views.fragments.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
-    <fragment
-        android:id="@+id/selectedRoleFragment2"
-        android:name="com.hieuminh.jobfinder.SelectedRoleFragment"
-        android:label="fragment_selected_role"
-        tools:layout="@layout/fragment_selected_role" />
 </navigation>

@@ -1,12 +1,14 @@
 package com.hieuminh.jobfinder.views.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.hieuminh.jobfinder.R
+import com.hieuminh.jobfinder.databinding.ActivityOnboardBinding
+import com.hieuminh.jobfinder.views.activity.base.BaseActivity
 
-class OnboardActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_onboard)
+class OnboardActivity : BaseActivity<ActivityOnboardBinding>() {
+    override fun getViewBinding() = ActivityOnboardBinding.inflate(layoutInflater)
+
+    override fun initListener() {
+    }
+
+    override fun initView() {
     }
 }

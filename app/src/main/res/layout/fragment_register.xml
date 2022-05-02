@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".views.fragments.RegisterFragment">
 
@@ -13,8 +14,9 @@
         android:text="@string/sign_up_for_free"
         android:textSize="@dimen/sp_18" />
 
-    <include
-        layout="@layout/item_input_data"
+    <com.hieuminh.jobfinder.views.customs.EditView
+        android:id="@+id/ev_email"
+        app:view_title="Email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16" />
@@ -30,14 +32,14 @@
         android:layout_height="wrap_content" />
 
     <CheckBox
-        android:id="@+id/cbRememberMe"
+        android:id="@+id/cb_remember_me"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/dp_16"
         android:text="@string/remember_me" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btSubmit"
+        android:id="@+id/bt_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_16"

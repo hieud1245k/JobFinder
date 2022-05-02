@@ -11,4 +11,6 @@
     <color name="colorLightBlue">#BDEAE5</color>
     <color name="colorRed">#B61111</color>
     <color name="colorNoChat">#555555</color>
+    <color name="colorTransparent">#00ff0000</color>
+    <color name="colorTransparentPercent25">#49111111</color>
 </resources>

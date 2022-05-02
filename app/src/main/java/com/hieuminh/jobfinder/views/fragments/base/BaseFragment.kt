@@ -8,21 +8,21 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 import com.hieuminh.jobfinder.interfaces.InitLayout
 
-abstract class BaseFragment<VB : ViewBinding> : Fragment(), InitLayout<VB> {
-    lateinit var binding: VB
+abstract class BaseFragment<VBinding : ViewBinding> : Fragment(), InitLayout<VBinding> {
+    var binding: VBinding? = null
         private set
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = getViewBinding()
-        return binding.root
+    ): View? {
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = getViewBinding()
         initView()
         initListener()
     }
