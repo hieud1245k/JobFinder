@@ -6,7 +6,7 @@
     android:background="@color/colorTransparentPercent25"
     android:clickable="true"
     android:focusable="true"
-    android:visibility="visible">
+    android:visibility="gone">
 
     <com.comix.overwatch.HiveProgressView
         android:layout_width="192dp"

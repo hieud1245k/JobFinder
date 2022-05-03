@@ -5,6 +5,8 @@
     <string name="sign_in_to_your_account">Sign in to your account</string>
     <string name="or_continue_with">or continue with</string>
     <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="you_have_not_had_an_account_yet">You have not had an account yet?</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>
     <string name="remember_me">Remember me</string>
@@ -30,4 +32,12 @@
     <string name="profile">Profile</string>
     <string name="upload_photo_profile">Upload Photo Profile</string>
     <string name="confirm">Confirm</string>
+    <string name="please_input_your_email_or_phone_number_to_search_for_your_account">Please input your email or phone number to search for your account</string>
+    <string name="input_email_or_phone_number">Input email or phone number</string>
+    <string name="select_which_contact_details_should_we_use_to_reset_you_password">Select which contact details should we use to reset you password</string>
+    <string name="via_sms">via SMS:</string>
+    <string name="via_email">via Email:</string>
+    <string name="go_to_login">Go to login</string>
+    <string name="your_account_is_ready_to_use">Your account is ready to use</string>
+    <string name="congrats">Congrats!</string>
 </resources>

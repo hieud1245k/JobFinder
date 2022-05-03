@@ -12,12 +12,14 @@ abstract class BaseInputDataView<VBinding : ViewBinding>(context: Context?, attr
 
     abstract var title: String?
     abstract var text: String?
+    open var hint: String? = null
 
     init {
         context?.obtainStyledAttributes(attrs, R.styleable.BaseInputDataView, 0, 0)?.run {
             try {
                 title = getString(R.styleable.BaseInputDataView_view_title)
                 text = getString(R.styleable.BaseInputDataView_text)
+                hint = getString(R.styleable.BaseInputDataView_hint)
             } catch (e: Exception) {
                 e.printStackTrace()
             } finally {

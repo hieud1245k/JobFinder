@@ -3,27 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/onboarding_nav"
-    app:startDestination="@id/onboardFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
-        android:id="@+id/greetFragment2"
+        android:id="@+id/greetFragment"
         android:name="com.hieuminh.jobfinder.views.fragments.GreetFragment"
         android:label="fragment_greet"
-        tools:layout="@layout/fragment_greet" >
+        tools:layout="@layout/fragment_greet">
         <action
             android:id="@+id/action_greetFragment2_to_onboardFragment"
-            app:destination="@id/onboardFragment" />
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/onboardFragment"
-        android:name="com.hieuminh.jobfinder.views.fragments.OnboardFragment"
-        android:label="OnboardFragment" >
+        android:id="@+id/loginFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.LoginFragment"
+        android:label="OnboardFragment"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_onboardFragment_to_forgotPasswordFragment"
             app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
         android:name="com.hieuminh.jobfinder.views.fragments.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register" />
 </navigation>

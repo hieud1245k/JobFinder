@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
+import androidx.fragment.app.FragmentActivity
 import com.hieuminh.jobfinder.R
 import com.hieuminh.jobfinder.databinding.ItemHeaderViewBinding
 import com.hieuminh.jobfinder.views.customs.base.BaseLinearLayout
@@ -41,7 +43,12 @@ class HeaderView(context: Context, attrs: AttributeSet) : BaseLinearLayout<ItemH
         this.iconSrc = resId
     }
 
+    private val backClickListener = View.OnClickListener {
+        (context as? FragmentActivity)?.onBackPressed()
+    }
+
     override fun initListener() {
+        binding?.ivBack?.setOnClickListener(backClickListener)
     }
 
     override fun initView() {

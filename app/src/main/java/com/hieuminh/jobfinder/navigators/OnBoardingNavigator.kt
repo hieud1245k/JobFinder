@@ -1,23 +1,29 @@
 package com.hieuminh.jobfinder.navigators
 
-import android.app.Activity
 import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.hieuminh.jobfinder.views.fragments.LoginFragmentDirections
 
 interface OnBoardingNavigator {
     fun startToRegister()
+    fun startToForgotPassword()
     fun backToLogin()
 }
 
 class OnBoardingNavigatorImpl(view: View?) : OnBoardingNavigator {
     private val navController: NavController? = view?.let { Navigation.findNavController(it) }
     override fun startToRegister() {
-        TODO("Not yet implemented")
+        val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+        navController?.navigate(action)
+    }
+
+    override fun startToForgotPassword() {
+        val action = LoginFragmentDirections.actionOnboardFragmentToForgotPasswordFragment()
+        navController?.navigate(action)
     }
 
     override fun backToLogin() {
-        TODO("Not yet implemented")
+        navController?.popBackStack()
     }
-
 }

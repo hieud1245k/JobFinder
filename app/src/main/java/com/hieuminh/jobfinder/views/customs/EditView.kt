@@ -21,6 +21,12 @@ class EditView(context: Context?, attrs: AttributeSet?) : BaseInputDataView<Item
             binding?.etInputData?.setText(value)
         }
 
+    override var hint : String?
+        get() = binding?.etInputData?.hint?.toString()
+        set(value) {
+            binding?.etInputData?.hint = value
+        }
+
     override fun getViewBinding() = ItemInputDataBinding.inflate(LayoutInflater.from(context), this, true)
 
     private val textWatcher = object : TextWatcher {
@@ -34,6 +40,6 @@ class EditView(context: Context?, attrs: AttributeSet?) : BaseInputDataView<Item
     }
 
     override fun initListener() {
-        binding?.etInputData?.addTextChangedListener(textWatcher)
+//        binding?.etInputData?.addTextChangedListener(textWatcher)
     }
 }

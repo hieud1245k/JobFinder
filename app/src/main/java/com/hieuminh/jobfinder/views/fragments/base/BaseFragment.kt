@@ -17,12 +17,12 @@ abstract class BaseFragment<VBinding : ViewBinding> : Fragment(), InitLayout<VBi
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = getViewBinding()
         return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = getViewBinding()
         initView()
         initListener()
     }
