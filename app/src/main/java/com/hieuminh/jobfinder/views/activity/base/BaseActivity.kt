@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import androidx.viewbinding.ViewBinding
 import com.hieuminh.jobfinder.R
+import com.hieuminh.jobfinder.interfaces.BaseViewEvent
 import com.hieuminh.jobfinder.interfaces.InitLayout
+import com.hieuminh.jobfinder.presenters.base.BaseView
 
-abstract class BaseActivity<VBinding : ViewBinding> : AppCompatActivity(), InitLayout<VBinding> {
+abstract class BaseActivity<VBinding : ViewBinding> : AppCompatActivity(), InitLayout<VBinding>, BaseViewEvent {
     lateinit var binding: VBinding
         private set
 
@@ -27,5 +29,8 @@ abstract class BaseActivity<VBinding : ViewBinding> : AppCompatActivity(), InitL
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+
+    override fun onConnectInternetFailure() {
     }
 }

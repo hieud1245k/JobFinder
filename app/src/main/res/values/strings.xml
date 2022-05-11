@@ -40,4 +40,5 @@
     <string name="go_to_login">Go to login</string>
     <string name="your_account_is_ready_to_use">Your account is ready to use</string>
     <string name="congrats">Congrats!</string>
+    <string name="username">Username</string>
 </resources>

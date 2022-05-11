@@ -29,11 +29,13 @@
             android:textSize="@dimen/sp_18" />
 
         <com.hieuminh.jobfinder.views.customs.EditView
+            android:id="@+id/evEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:view_title="@string/email" />
+            app:view_title="@string/username" />
 
         <com.hieuminh.jobfinder.views.customs.EditView
+            android:id="@+id/evPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:view_title="@string/password" />
