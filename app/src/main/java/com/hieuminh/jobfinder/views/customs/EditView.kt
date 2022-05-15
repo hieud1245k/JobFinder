@@ -5,10 +5,14 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import com.hieuminh.jobfinder.R
+import com.hieuminh.jobfinder.common.extensions.ViewExtensions.visible
 import com.hieuminh.jobfinder.databinding.ItemInputDataBinding
 import com.hieuminh.jobfinder.views.customs.base.BaseInputDataView
 
 class EditView(context: Context?, attrs: AttributeSet?) : BaseInputDataView<ItemInputDataBinding>(context, attrs) {
+    private var suffixIconSrc: Int = 0
+
     override var title: String?
         get() = binding?.tvTitle?.text?.toString()
         set(value) {
@@ -21,11 +25,24 @@ class EditView(context: Context?, attrs: AttributeSet?) : BaseInputDataView<Item
             binding?.etInputData?.setText(value)
         }
 
-    override var hint : String?
+    override var hint: String?
         get() = binding?.etInputData?.hint?.toString()
         set(value) {
             binding?.etInputData?.hint = value
         }
+
+    init {
+        context?.obtainStyledAttributes(attrs, R.styleable.EditView, 0, 0)?.apply {
+            try {
+                suffixIconSrc = getResourceId(R.styleable.EditView_suffixIconSrc, 0)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                recycle()
+            }
+        }
+
+    }
 
     override fun getViewBinding() = ItemInputDataBinding.inflate(LayoutInflater.from(context), this, true)
 
@@ -41,5 +58,15 @@ class EditView(context: Context?, attrs: AttributeSet?) : BaseInputDataView<Item
 
     override fun initListener() {
 //        binding?.etInputData?.addTextChangedListener(textWatcher)
+    }
+
+    override fun initView() {
+        super.initView()
+        if (suffixIconSrc != 0) {
+            binding?.ivSuffixIcon?.run {
+                visible()
+                setImageResource(suffixIconSrc)
+            }
+        }
     }
 }

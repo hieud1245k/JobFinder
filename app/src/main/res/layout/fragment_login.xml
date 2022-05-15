@@ -32,12 +32,15 @@
             android:id="@+id/evEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:hint="@string/input_your_username_or_email"
             app:view_title="@string/username" />
 
         <com.hieuminh.jobfinder.views.customs.EditView
             android:id="@+id/evPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:hint="@string/input_your_password"
+            app:suffixIconSrc="@drawable/ic_eye_hidden"
             app:view_title="@string/password" />
 
         <CheckBox

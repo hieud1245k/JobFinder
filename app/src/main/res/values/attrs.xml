@@ -9,5 +9,10 @@
         <attr name="view_title" format="string" />
         <attr name="text" format="string" />
         <attr name="hint" format="string" />
+        <attr name="suffixSrc" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="EditView">
+        <attr name="suffixIconSrc" format="reference|color" />
     </declare-styleable>
 </resources>

@@ -41,4 +41,6 @@
     <string name="your_account_is_ready_to_use">Your account is ready to use</string>
     <string name="congrats">Congrats!</string>
     <string name="username">Username</string>
+    <string name="input_your_password">Input your password</string>
+    <string name="input_your_username_or_email">Input your username or email</string>
 </resources>
