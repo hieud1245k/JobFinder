@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JobFinder"
-        tools:ignore="AllowBackup">
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup"
+        tools:targetApi="m">
         <activity
             android:name=".views.activity.MainActivity"
             android:exported="false" />

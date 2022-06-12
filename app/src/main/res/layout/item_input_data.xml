@@ -10,8 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_12"
         android:layout_marginBottom="@dimen/dp_8"
-        android:text="Field title"
-        android:textSize="@dimen/dp_14"
+        android:textSize="@dimen/sp_14"
         android:visibility="visible" />
 
     <LinearLayout
@@ -40,7 +39,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivSuffixIcon"
             android:layout_width="@dimen/dp_40"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/dp_28"
             android:padding="@dimen/dp_4"
             android:visibility="gone" />
 

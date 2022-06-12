@@ -5,12 +5,24 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.widget.EditText
+import android.widget.ImageView
 import com.hieuminh.jobfinder.R
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.visible
 import com.hieuminh.jobfinder.databinding.ItemInputDataBinding
 import com.hieuminh.jobfinder.views.customs.base.BaseInputDataView
 
-class EditView(context: Context?, attrs: AttributeSet?) : BaseInputDataView<ItemInputDataBinding>(context, attrs) {
+class EditView(context: Context?, attrs: AttributeSet?) :
+    BaseInputDataView<ItemInputDataBinding>(context, attrs) {
+    override val sourceView: EditText?
+        get() = binding?.etInputData
+
+    val prefixIcon: ImageView?
+        get() = binding?.ivPrefixIcon
+
+    val suffixIcon: ImageView?
+        get() = binding?.ivSuffixIcon
+
     private var suffixIconSrc: Int = 0
 
     override var title: String?
@@ -41,10 +53,16 @@ class EditView(context: Context?, attrs: AttributeSet?) : BaseInputDataView<Item
                 recycle()
             }
         }
-
     }
 
-    override fun getViewBinding() = ItemInputDataBinding.inflate(LayoutInflater.from(context), this, true)
+    override fun getViewBinding() =
+        ItemInputDataBinding.inflate(LayoutInflater.from(context), this, true)
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
+        initView()
+        initListener()
+    }
 
     private val textWatcher = object : TextWatcher {
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit

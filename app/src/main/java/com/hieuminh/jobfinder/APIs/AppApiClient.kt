@@ -22,7 +22,7 @@ object AppApiClient {
             appRetrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-                .baseUrl(UrlConstant.JOB_FINDER_SERVER_URL)
+                .baseUrl(UrlConstant.LOCAL_API_URL)
                 .client(okHttpClient)
                 .build()
         }

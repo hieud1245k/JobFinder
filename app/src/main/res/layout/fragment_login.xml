@@ -30,6 +30,7 @@
 
         <com.hieuminh.jobfinder.views.customs.EditView
             android:id="@+id/evEmail"
+            app:text="client"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:hint="@string/input_your_username_or_email"
@@ -38,6 +39,7 @@
         <com.hieuminh.jobfinder.views.customs.EditView
             android:id="@+id/evPassword"
             android:layout_width="match_parent"
+            app:text="client"
             android:layout_height="wrap_content"
             app:hint="@string/input_your_password"
             app:suffixIconSrc="@drawable/ic_eye_hidden"
