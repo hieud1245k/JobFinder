@@ -1,14 +1,10 @@
 package com.hieuminh.jobfinder.presenters.base
 
-import com.hieuminh.jobfinder.APIs.AppApiClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 abstract class BasePresenterImpl(private var view: BaseView?) : BasePresenter {
-    val apiClient = AppApiClient
-
-
     fun <T> enqueue(call: Call<T>?, onSuccess: (T?) -> Unit) {
         view?.startLoading()
         val callBack = object : Callback<T> {
@@ -18,7 +14,7 @@ abstract class BasePresenterImpl(private var view: BaseView?) : BasePresenter {
                     onSuccess(response.body())
                     return
                 }
-                val errorMessage = when(response.code()) {
+                val errorMessage = when (response.code()) {
                     401 -> "Your account do not permitted!"
                     else -> "User name or password incorrect!"
                 }

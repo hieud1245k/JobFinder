@@ -43,4 +43,12 @@
     <string name="username">Username</string>
     <string name="input_your_password">Input your password</string>
     <string name="input_your_username_or_email">Input your username or email</string>
+    <string name="active_account">Active account</string>
+    <string name="code_has_been_send_to_s">Code has been send to %s</string>
+    <string name="active">Active</string>
+    <string name="resend_code_in_s_s">Resend code in %ss</string>
+    <string name="active_account_successful">Active account successful!</string>
+    <string name="continue_to_register">Continue to register</string>
+    <string name="go_to_homepage">Go to homepage</string>
+    <string name="recovery_account_successful">Recovery account successful!</string>
 </resources>

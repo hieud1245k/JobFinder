@@ -24,15 +24,58 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_activeAccountFragment"
+            app:destination="@id/activeAccountFragment" />
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
         android:name="com.hieuminh.jobfinder.views.fragments.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" />
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_inputNewPasswordFragment"
+            app:destination="@id/inputNewPasswordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.hieuminh.jobfinder.views.fragments.RegisterFragment"
         android:label="RegisterFragment"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_activeAccountFragment"
+            app:destination="@id/activeAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activeAccountFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.ActiveAccountFragment"
+        android:label="ActiveAccountFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_activeAccountFragment_to_activeAccountSccessfulFragment"
+            app:destination="@id/activeAccountSccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activeAccountSccessfulFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.ActiveAccountSuccessfulFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
+
+    <fragment
+        android:id="@+id/accountRecoverySccessfulFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.AccountRecoverySuccessfulFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" />
+    <fragment
+        android:id="@+id/inputNewPasswordFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.InputNewPasswordFragment"
+        android:label="fragment_input_new_password"
+        tools:layout="@layout/fragment_input_new_password" >
+        <action
+            android:id="@+id/action_inputNewPasswordFragment_to_accountRecoverySccessfulFragment"
+            app:destination="@id/accountRecoverySccessfulFragment" />
+    </fragment>
 </navigation>

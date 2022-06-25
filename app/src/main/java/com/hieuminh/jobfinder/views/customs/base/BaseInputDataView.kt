@@ -6,7 +6,6 @@ import android.util.AttributeSet
 import android.widget.EditText
 import androidx.viewbinding.ViewBinding
 import com.hieuminh.jobfinder.R
-import com.hieuminh.jobfinder.views.customs.EditView
 
 @SuppressLint("Recycle")
 abstract class BaseInputDataView<VBinding : ViewBinding>(context: Context?, attrs: AttributeSet?) : BaseLinearLayout<VBinding>(context, attrs) {

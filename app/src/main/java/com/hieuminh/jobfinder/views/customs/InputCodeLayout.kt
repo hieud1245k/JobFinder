@@ -5,16 +5,23 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.view.View.OnClickListener
 import android.widget.EditText
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.hideKeyboard
 import com.hieuminh.jobfinder.databinding.LayoutInputCodeBinding
 import com.hieuminh.jobfinder.views.customs.base.BaseLinearLayout
 
-class InputCodeLayout(context: Context?, attrs: AttributeSet?) : BaseLinearLayout<LayoutInputCodeBinding>(context, attrs) {
-    private val listView: List<View?>
-        get() = listOf(binding?.etFirstCode, binding?.etSecondCode, binding?.etThirdCode, binding?.etFourthCode)
+class InputCodeLayout(context: Context?, attrs: AttributeSet?) :
+    BaseLinearLayout<LayoutInputCodeBinding>(context, attrs) {
+    private var inputCodeListener: InputCodeListener? = null
+
+    private val listView: List<EditText?>
+        get() = listOf(
+            binding?.etFirstCode,
+            binding?.etSecondCode,
+            binding?.etThirdCode,
+            binding?.etFourthCode
+        )
 
     private val codeClickListener = OnClickListener {
         listView.firstOrNull()?.requestFocus()
@@ -22,18 +29,29 @@ class InputCodeLayout(context: Context?, attrs: AttributeSet?) : BaseLinearLayou
 
     private fun addTextChangedListener(editText: EditText?) {
         editText?.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) = Unit
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) =
+                Unit
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) = Unit
 
             override fun afterTextChanged(value: Editable?) {
+                if (value.isNullOrEmpty()) {
+                    return
+                }
                 try {
                     val index = listView.indexOf(editText)
                     if (listView.lastIndex == index) {
                         editText.clearFocus()
                         editText.hideKeyboard()
+                        val code = listView.fold("") { code, view ->
+                            code.plus(view?.text.toString().trim())
+                        }
+                        inputCodeListener?.inputCodeCompleted(code)
                     } else {
-                        listView[index.inc()]?.requestFocus()
+                        listView[index.inc()]?.run {
+                            setText("")
+                            requestFocus()
+                        }
                     }
                 } catch (e: Exception) {
                     e.printStackTrace()
@@ -42,7 +60,8 @@ class InputCodeLayout(context: Context?, attrs: AttributeSet?) : BaseLinearLayou
         })
     }
 
-    override fun getViewBinding() = LayoutInputCodeBinding.inflate(LayoutInflater.from(context), this, true)
+    override fun getViewBinding() =
+        LayoutInputCodeBinding.inflate(LayoutInflater.from(context), this, true)
 
     override fun initListener() {
         addTextChangedListener(binding?.etFirstCode)
@@ -53,4 +72,12 @@ class InputCodeLayout(context: Context?, attrs: AttributeSet?) : BaseLinearLayou
     }
 
     override fun initView() = Unit
+
+    fun setInputCodeListener(listener: InputCodeListener) {
+        this.inputCodeListener = listener
+    }
+
+    interface InputCodeListener {
+        fun inputCodeCompleted(code: String)
+    }
 }

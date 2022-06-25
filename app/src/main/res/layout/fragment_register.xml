@@ -25,6 +25,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_16"
             android:gravity="center_horizontal"
             android:text="@string/sign_up_for_free"
             android:textSize="@dimen/sp_18" />
@@ -34,24 +35,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_16"
-            app:view_title="Email" />
+            app:hint="Input your email" />
 
-        <include
-            layout="@layout/item_input_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <include
-            layout="@layout/item_input_data"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <CheckBox
-            android:id="@+id/cb_remember_me"
+        <com.hieuminh.jobfinder.views.customs.PasswordView
+            android:id="@+id/ev_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/dp_16"
-            android:text="@string/remember_me" />
+            android:layout_marginTop="@dimen/dp_16"
+            app:hint="Input new password" />
+
+        <com.hieuminh.jobfinder.views.customs.PasswordView
+            android:id="@+id/ev_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            app:hint="Input confirm new password" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_submit"
@@ -153,7 +151,7 @@
                 android:id="@+id/tv_sign_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_8"
+                android:padding="@dimen/dp_8"
                 android:text="@string/sign_in"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/sp_14" />

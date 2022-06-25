@@ -7,7 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 object ViewExtensions {
     fun View.hideKeyboard() {
         try {
-            val inputMethodManager = context.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager
+            val inputMethodManager =
+                context.getSystemService(AppCompatActivity.INPUT_METHOD_SERVICE) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
         } catch (e: Exception) {
             e.printStackTrace()
@@ -24,5 +25,11 @@ object ViewExtensions {
 
     fun View.invisible() {
         visibility = View.INVISIBLE
+    }
+
+    fun View.onClick(onClick: () -> Unit) {
+        this.setOnClickListener {
+            onClick.invoke()
+        }
     }
 }

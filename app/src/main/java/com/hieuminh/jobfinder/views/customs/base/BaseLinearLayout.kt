@@ -8,11 +8,19 @@ import com.hieuminh.jobfinder.interfaces.InitLayout
 
 abstract class BaseLinearLayout<VBinding: ViewBinding>(context: Context?, attrs: AttributeSet?) :
     LinearLayout(context, attrs), InitLayout<VBinding> {
-    var binding: VBinding? = null
+    protected var binding: VBinding? = null
         private set
 
     init {
+        init()
+    }
+
+    private fun init() {
         binding = getViewBinding()
+    }
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
         initView()
         initListener()
     }

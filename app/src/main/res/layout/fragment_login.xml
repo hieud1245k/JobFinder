@@ -24,25 +24,25 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_16"
             android:gravity="center_horizontal"
             android:text="@string/sign_in_to_your_account"
             android:textSize="@dimen/sp_18" />
 
         <com.hieuminh.jobfinder.views.customs.EditView
             android:id="@+id/evEmail"
-            app:text="client"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:hint="@string/input_your_username_or_email"
+            app:text="hieuminh22490@gmail.com"
             app:view_title="@string/username" />
 
-        <com.hieuminh.jobfinder.views.customs.EditView
+        <com.hieuminh.jobfinder.views.customs.PasswordView
             android:id="@+id/evPassword"
             android:layout_width="match_parent"
-            app:text="client"
             android:layout_height="wrap_content"
             app:hint="@string/input_your_password"
-            app:suffixIconSrc="@drawable/ic_eye_hidden"
+            app:text="1234"
             app:view_title="@string/password" />
 
         <CheckBox
@@ -162,7 +162,7 @@
                 android:id="@+id/tv_sign_up"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_8"
+                android:padding="@dimen/dp_8"
                 android:text="@string/sign_up"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/sp_14" />
