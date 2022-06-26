@@ -26,12 +26,24 @@ interface UserContracts {
     }
 
     interface ActiveUserContract {
-        interface Presenter: BasePresenter {
+        interface Presenter : BasePresenter {
             fun sendActiveCode(email: String, activeCode: Int)
         }
 
-        interface View: BaseView {
+        interface View : BaseView {
             fun activeUserSuccess(loginRes: LoginRes?)
+        }
+    }
+
+    interface ResetPasswordContract {
+        interface Presenter : BasePresenter {
+            fun verifyEmail(email : String)
+            fun resetPassword(userId: Int, newPassword: String)
+        }
+
+        interface View : BaseView {
+            fun resetPasswordSuccessful(loginRes: LoginRes)
+            fun verifyEmailSuccess(userId: Int)
         }
     }
 }

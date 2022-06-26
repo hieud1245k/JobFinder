@@ -20,10 +20,18 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_onboardFragment_to_forgotPasswordFragment"
-            app:destination="@id/forgotPasswordFragment" />
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_loginFragment_to_activeAccountFragment"
             app:destination="@id/activeAccountFragment" />
@@ -32,7 +40,7 @@
         android:id="@+id/forgotPasswordFragment"
         android:name="com.hieuminh.jobfinder.views.fragments.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" >
+        tools:layout="@layout/fragment_forgot_password">
         <action
             android:id="@+id/action_forgotPasswordFragment_to_inputNewPasswordFragment"
             app:destination="@id/inputNewPasswordFragment" />
@@ -50,7 +58,7 @@
         android:id="@+id/activeAccountFragment"
         android:name="com.hieuminh.jobfinder.views.fragments.ActiveAccountFragment"
         android:label="ActiveAccountFragment"
-        tools:layout="@layout/fragment_forgot_password">
+        tools:layout="@layout/fragment_active_account">
         <argument
             android:name="email"
             app:argType="string" />
@@ -73,7 +81,7 @@
         android:id="@+id/inputNewPasswordFragment"
         android:name="com.hieuminh.jobfinder.views.fragments.InputNewPasswordFragment"
         android:label="fragment_input_new_password"
-        tools:layout="@layout/fragment_input_new_password" >
+        tools:layout="@layout/fragment_input_new_password">
         <action
             android:id="@+id/action_inputNewPasswordFragment_to_accountRecoverySccessfulFragment"
             app:destination="@id/accountRecoverySccessfulFragment" />

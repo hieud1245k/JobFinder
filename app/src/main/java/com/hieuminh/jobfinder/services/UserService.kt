@@ -16,6 +16,12 @@ interface UserService {
     @GET("users/profile")
     fun profile(): Call<JsonObject>
 
-    @PUT("users/active-user/")
+    @PUT("users/active-user")
     fun activeAccount(@Body params: Map<String, @JvmSuppressWildcards Any>): Call<LoginRes>
+
+    @POST("users/verify-mail")
+    fun verifyEmail(@Body params: Map<String, @JvmSuppressWildcards Any>): Call<JsonObject>
+
+    @PUT("users/reset-password")
+    fun resetPassword()
 }

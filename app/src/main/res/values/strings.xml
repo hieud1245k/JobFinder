@@ -51,4 +51,6 @@
     <string name="continue_to_register">Continue to register</string>
     <string name="go_to_homepage">Go to homepage</string>
     <string name="recovery_account_successful">Recovery account successful!</string>
+    <string name="verify_email">Verify email</string>
+    <string name="your_email_s_is_verified">Your email (%s) is verified!</string>
 </resources>

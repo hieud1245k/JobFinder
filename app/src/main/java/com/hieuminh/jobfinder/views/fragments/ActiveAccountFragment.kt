@@ -6,6 +6,7 @@ import com.hieuminh.jobfinder.R
 import com.hieuminh.jobfinder.common.extensions.StringExtension.toSafeInt
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.gone
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.onClick
+import com.hieuminh.jobfinder.databinding.FragmentActiveAccountBinding
 import com.hieuminh.jobfinder.databinding.FragmentForgotPasswordBinding
 import com.hieuminh.jobfinder.models.response.LoginRes
 import com.hieuminh.jobfinder.navigators.OnBoardingNavigator
@@ -18,12 +19,12 @@ import com.hieuminh.jobfinder.views.fragments.base.BaseAdvanceFragment
 class ActiveAccountFragment : BaseAdvanceFragment<
         OnBoardingNavigator,
         UserContracts.ActiveUserContract.Presenter,
-        FragmentForgotPasswordBinding
+        FragmentActiveAccountBinding
         >(),
     UserContracts.ActiveUserContract.View, InputCodeLayout.InputCodeListener {
     private var mEmail: String? = null
 
-    override fun getViewBinding() = FragmentForgotPasswordBinding.inflate(layoutInflater)
+    override fun getViewBinding() = FragmentActiveAccountBinding.inflate(layoutInflater)
 
     override fun getPresenter() = UserPresenterImpl.ActiveUserPresenterImpl(this)
 

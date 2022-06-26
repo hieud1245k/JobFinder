@@ -19,7 +19,7 @@ object UserPresenterImpl {
                 "email" to email,
                 "password" to password,
                 "appUserRole" to UserRole.APPLICANT.index,
-                )
+            )
             enqueue(service.signIn(params)) { jsonObject ->
                 JsonUtils.fromJson<LoginRes>(jsonObject)
                     ?.let { loginRes -> view.onLoginSuccess(loginRes) }
@@ -53,6 +53,23 @@ object UserPresenterImpl {
             enqueue(service.activeAccount(params)) { loginRes ->
                 view?.activeUserSuccess(loginRes)
             }
+        }
+    }
+
+    class ResetPasswordPresenterImpl(private val view: UserContracts.ResetPasswordContract.View?) :
+        BasePresenterImpl(view), UserContracts.ResetPasswordContract.Presenter {
+        override fun verifyEmail(email: String) {
+            val params = hashMapOf(
+                "email" to email,
+            )
+            enqueue(service.verifyEmail(params)) { jsonObject ->
+                if (jsonObject?.has("userId") == true) {
+                    view?.verifyEmailSuccess(jsonObject["userId"].asInt)
+                }
+            }
+        }
+
+        override fun resetPassword(userId: Int, newPassword: String) {
         }
     }
 }
