@@ -1,5 +1,7 @@
 package com.hieuminh.jobfinder.presenters
 
+import com.google.gson.JsonObject
+import com.hieuminh.jobfinder.models.ApplicantProfile
 import com.hieuminh.jobfinder.models.response.LoginRes
 import com.hieuminh.jobfinder.presenters.base.BasePresenter
 import com.hieuminh.jobfinder.presenters.base.BaseView
@@ -44,6 +46,16 @@ interface UserContracts {
         interface View : BaseView {
             fun resetPasswordSuccessful(loginRes: LoginRes)
             fun verifyEmailSuccess(userId: Int)
+        }
+    }
+
+    interface ProfileContract {
+        interface Presenter: BasePresenter {
+            fun createProfile(applicantProfile: ApplicantProfile)
+        }
+
+        interface  View: BaseView {
+            fun createProfileSuccess(jsonObject: JsonObject?)
         }
     }
 }

@@ -1,7 +1,9 @@
 package com.hieuminh.jobfinder.common.extensions
 
+import android.text.InputType
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
 object ViewExtensions {
@@ -31,5 +33,11 @@ object ViewExtensions {
         this.setOnClickListener {
             onClick.invoke()
         }
+    }
+
+    fun EditText.toTextView() {
+        inputType = InputType.TYPE_NULL
+        isCursorVisible = false
+        isFocusable = false
     }
 }

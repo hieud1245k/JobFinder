@@ -24,7 +24,7 @@ open class EditView(context: Context?, attrs: AttributeSet?) :
     val suffixIcon: ImageView?
         get() = binding?.ivSuffixIcon
 
-    private var suffixIconSrc: Int = 0
+    protected var suffixIconSrc: Int = 0
 
     override var title: String?
         get() = binding?.tvTitle?.text?.toString()

@@ -10,10 +10,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_12"
         android:layout_marginBottom="@dimen/dp_8"
-        android:textSize="@dimen/sp_14"
+        android:textSize="@dimen/sp_16"
         android:visibility="visible" />
 
     <LinearLayout
+        android:id="@+id/ll_input_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_border_input_data"

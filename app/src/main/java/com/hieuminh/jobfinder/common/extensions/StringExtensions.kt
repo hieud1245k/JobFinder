@@ -1,6 +1,6 @@
 package com.hieuminh.jobfinder.common.extensions
 
-object StringExtension {
+object StringExtensions {
     fun String.toSafeInt(): Int {
         return try {
             Integer.parseInt(this)

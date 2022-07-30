@@ -1,8 +1,5 @@
 package com.hieuminh.jobfinder.views.activity
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.hieuminh.jobfinder.R
 import com.hieuminh.jobfinder.databinding.ActivityInitProfileBinding
 import com.hieuminh.jobfinder.views.activity.base.BaseActivity
 
