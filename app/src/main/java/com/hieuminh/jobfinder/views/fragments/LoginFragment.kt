@@ -21,8 +21,8 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(), UserContracts.LoginC
 
     private val signInClickListener = View.OnClickListener {
         mPresenter?.login(
-            binding?.evEmail?.text ?: "",
-            binding?.evPassword?.text ?: "",
+            binding?.evEmail?.text?.toString() ?: "",
+            binding?.evPassword?.text?.toString() ?: "",
         )
     }
 
@@ -39,7 +39,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(), UserContracts.LoginC
     override fun onFailure(errorMessage: String, code: Int?) {
         when (code) {
             406 -> {
-                mNavigator?.startActiveAccountFromLogin(binding?.evEmail?.text ?: "")
+                mNavigator?.startActiveAccountFromLogin(binding?.evEmail?.text?.toString() ?: "")
             }
             else -> {
                 AlertDialog.Builder(context)

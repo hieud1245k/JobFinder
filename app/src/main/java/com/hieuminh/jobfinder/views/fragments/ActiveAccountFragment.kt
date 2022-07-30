@@ -3,11 +3,10 @@ package com.hieuminh.jobfinder.views.fragments
 import android.os.Bundle
 import android.os.CountDownTimer
 import com.hieuminh.jobfinder.R
-import com.hieuminh.jobfinder.common.extensions.StringExtension.toSafeInt
+import com.hieuminh.jobfinder.common.extensions.StringExtensions.toSafeInt
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.gone
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.onClick
 import com.hieuminh.jobfinder.databinding.FragmentActiveAccountBinding
-import com.hieuminh.jobfinder.databinding.FragmentForgotPasswordBinding
 import com.hieuminh.jobfinder.models.response.LoginRes
 import com.hieuminh.jobfinder.navigators.OnBoardingNavigator
 import com.hieuminh.jobfinder.navigators.OnBoardingNavigatorImpl

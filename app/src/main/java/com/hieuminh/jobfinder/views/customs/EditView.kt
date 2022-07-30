@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.ImageView
+import androidx.core.view.isVisible
 import com.hieuminh.jobfinder.R
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.gone
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.visible
@@ -24,16 +25,16 @@ open class EditView(context: Context?, attrs: AttributeSet?) :
     val suffixIcon: ImageView?
         get() = binding?.ivSuffixIcon
 
-    private var suffixIconSrc: Int = 0
+    protected var suffixIconSrc: Int = 0
 
-    override var title: String?
-        get() = binding?.tvTitle?.text?.toString()
+    override var title: CharSequence?
+        get() = binding?.tvTitle?.text
         set(value) {
             binding?.tvTitle?.text = value
         }
 
-    override var text: String?
-        get() = binding?.etInputData?.text?.toString()
+    override var text: CharSequence?
+        get() = binding?.etInputData?.text
         set(value) {
             binding?.etInputData?.setText(value)
         }
@@ -81,8 +82,13 @@ open class EditView(context: Context?, attrs: AttributeSet?) :
                 setImageResource(suffixIconSrc)
             }
         }
-        if(binding?.tvTitle?.text.isNullOrEmpty()) {
+        if (binding?.tvTitle?.text.isNullOrEmpty()) {
             binding?.tvTitle?.gone()
         }
+    }
+
+    fun showError(message: String?) {
+        binding?.layoutError?.root?.isVisible = message != null
+        binding?.layoutError?.tvError?.text = message
     }
 }

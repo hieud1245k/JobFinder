@@ -12,7 +12,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,65 +22,102 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:paddingVertical="@dimen/dp_12">
+                android:layout_marginVertical="@dimen/dp_16"
+                android:elevation="@dimen/dp_20"
+                app:cardCornerRadius="@dimen/dp_20"
+                app:cardUseCompatPadding="true">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/llAvatarUpload"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/bg_border_cricle_icon"
-                    android:padding="@dimen/dp_12"
-                    android:src="@drawable/ic_baseline_cloud_upload_24"
-                    android:tint="@color/colorPrimary" />
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/dp_12">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_12"
-                    android:text="@string/upload_photo_profile"
-                    android:textSize="@dimen/sp_16" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_border_cricle_icon"
+                        android:padding="@dimen/dp_12"
+                        android:src="@drawable/ic_baseline_cloud_upload_24"
+                        android:tint="@color/colorPrimary" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:text="@string/upload_photo_profile"
+                        android:textSize="@dimen/sp_16" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivAvatar"
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="@dimen/dp_120"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:visibility="gone"
+                app:civ_border_color="@color/black"
+                app:civ_border_width="@dimen/dp_2" />
 
             <com.hieuminh.jobfinder.views.customs.EditView
+                android:id="@+id/evFullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:view_title="Full Name" />
+                app:hint="Your full name"
+                app:view_title="Enter full name" />
+
+            <com.hieuminh.jobfinder.views.customs.DateSelectView
+                android:id="@+id/evDayOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="Your day of birth"
+                app:view_title="Enter day of birth" />
+
+            <com.hieuminh.jobfinder.views.customs.ProvinceSelectView
+                android:id="@+id/spProvinceSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <com.hieuminh.jobfinder.views.customs.EditView
+                android:id="@+id/evAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:view_title="Full Name" />
+                app:hint="Your detail address"
+                app:view_title="Enter detail address" />
 
-            <com.hieuminh.jobfinder.views.customs.EditView
+            <com.hieuminh.jobfinder.views.customs.ParagraphView
+                android:id="@+id/pvOccupation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:view_title="Full Name" />
-
-            <com.hieuminh.jobfinder.views.customs.EditView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:view_title="Full Name" />
-
-            <com.hieuminh.jobfinder.views.customs.EditView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:view_title="Full Name" />
+                android:layout_marginBottom="@dimen/dp_24"
+                app:hint="Writing something..."
+                app:view_title="Enter occupation" />
 
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-    <Button
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorNoChat" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dp_16"
-        android:layout_marginBottom="@dimen/dp_32"
+        android:layout_margin="@dimen/dp_16"
         android:background="@drawable/bg_border_common_button"
-        android:text="@string/confirm" />
+        android:text="@string/create_profile"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18" />
 
 </LinearLayout>

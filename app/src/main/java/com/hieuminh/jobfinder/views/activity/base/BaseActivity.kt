@@ -1,6 +1,8 @@
 package com.hieuminh.jobfinder.views.activity.base
 
+import android.content.Intent
 import android.os.Bundle
+import androidx.activity.result.ActivityResult
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import androidx.viewbinding.ViewBinding
@@ -8,8 +10,12 @@ import com.hieuminh.jobfinder.R
 import com.hieuminh.jobfinder.interfaces.BaseViewEvent
 import com.hieuminh.jobfinder.interfaces.InitLayout
 import com.hieuminh.jobfinder.presenters.base.BaseView
+import com.hieuminh.jobfinder.utils.CustomActivityResult
+import com.hieuminh.jobfinder.utils.CustomActivityResult.Companion.registerActivityForResult
 
 abstract class BaseActivity<VBinding : ViewBinding> : AppCompatActivity(), InitLayout<VBinding>, BaseViewEvent {
+    private val activityLauncher = registerActivityForResult(this)
+
     lateinit var binding: VBinding
         private set
 
@@ -32,5 +38,9 @@ abstract class BaseActivity<VBinding : ViewBinding> : AppCompatActivity(), InitL
     }
 
     override fun onConnectInternetFailure() {
+    }
+
+    fun activityLauncher(): CustomActivityResult<Intent, ActivityResult>? {
+        return activityLauncher
     }
 }

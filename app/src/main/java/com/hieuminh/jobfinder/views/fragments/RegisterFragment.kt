@@ -20,8 +20,8 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), UserContracts.
     }
 
     private val registerClickListener = View.OnClickListener {
-        val email = binding?.evEmail?.text ?: ""
-        val password = binding?.evPassword?.text ?: ""
+        val email = binding?.evEmail?.text?.toString() ?: ""
+        val password = binding?.evPassword?.text?.toString() ?: ""
         mRegisterPresenter?.register(email, password)
     }
 
@@ -30,13 +30,13 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(), UserContracts.
     }
 
     override fun onRegisterSuccess() {
-        mNavigator?.startActiveAccount(binding?.evEmail?.text ?: "")
+        mNavigator?.startActiveAccount(binding?.evEmail?.text?.toString() ?: "")
     }
 
     override fun onFailure(errorMessage: String, code: Int?) {
         when(code) {
             406 -> {
-                mNavigator?.startActiveAccount(binding?.evEmail?.text ?: "")
+                mNavigator?.startActiveAccount(binding?.evEmail?.text?.toString() ?: "")
             }
             else -> {
                 AlertDialog.Builder(context)

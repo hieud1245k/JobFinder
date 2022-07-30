@@ -50,7 +50,7 @@ class ForgotPasswordFragment : BaseAdvanceFragment<
     }
 
     private fun verifyEmail() {
-        mPresenter?.verifyEmail(binding?.evEmail?.text ?: return)
+        mPresenter?.verifyEmail(binding?.evEmail?.text?.toString() ?: return)
     }
 
     override fun initListener() {

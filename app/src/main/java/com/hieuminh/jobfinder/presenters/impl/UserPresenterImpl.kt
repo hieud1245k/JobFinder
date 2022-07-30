@@ -2,6 +2,7 @@ package com.hieuminh.jobfinder.presenters.impl
 
 import com.hieuminh.jobfinder.APIs.AppApiClient
 import com.hieuminh.jobfinder.common.enums.UserRole
+import com.hieuminh.jobfinder.models.ApplicantProfile
 import com.hieuminh.jobfinder.models.response.LoginRes
 import com.hieuminh.jobfinder.presenters.UserContracts
 import com.hieuminh.jobfinder.presenters.base.BasePresenterImpl
@@ -70,6 +71,15 @@ object UserPresenterImpl {
         }
 
         override fun resetPassword(userId: Int, newPassword: String) {
+        }
+    }
+
+    class ProfilePresenterImpl(private val view: UserContracts.ProfileContract.View?) :
+        BasePresenterImpl(view), UserContracts.ProfileContract.Presenter {
+        override fun createProfile(applicantProfile: ApplicantProfile) {
+            enqueue(service.createProfile(applicantProfile)) { jsonObject ->
+                view?.createProfileSuccess(jsonObject)
+            }
         }
     }
 }

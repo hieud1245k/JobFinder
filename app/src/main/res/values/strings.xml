@@ -53,4 +53,7 @@
     <string name="recovery_account_successful">Recovery account successful!</string>
     <string name="verify_email">Verify email</string>
     <string name="your_email_s_is_verified">Your email (%s) is verified!</string>
+    <string name="create_profile">Create profile</string>
+    <string name="your_province">Your province</string>
+    <string name="enter_province">Enter province</string>
 </resources>

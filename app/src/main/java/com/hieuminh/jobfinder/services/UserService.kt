@@ -1,6 +1,7 @@
 package com.hieuminh.jobfinder.services
 
 import com.google.gson.JsonObject
+import com.hieuminh.jobfinder.models.ApplicantProfile
 import com.hieuminh.jobfinder.models.response.LoginRes
 import retrofit2.Call
 import retrofit2.Response
@@ -24,4 +25,7 @@ interface UserService {
 
     @PUT("users/reset-password")
     fun resetPassword()
+
+    @POST("applicants/profile")
+    fun createProfile(@Body applicantProfile: ApplicantProfile): Call<JsonObject>
 }
