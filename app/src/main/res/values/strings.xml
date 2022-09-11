@@ -56,4 +56,5 @@
     <string name="create_profile">Create profile</string>
     <string name="your_province">Your province</string>
     <string name="enter_province">Enter province</string>
+    <string name="input_here">Input here</string>
 </resources>

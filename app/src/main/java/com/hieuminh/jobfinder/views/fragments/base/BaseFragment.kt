@@ -11,7 +11,7 @@ import com.hieuminh.jobfinder.interfaces.BaseViewEvent
 import com.hieuminh.jobfinder.views.activity.base.BaseActivity
 
 abstract class BaseFragment<VBinding : ViewBinding> : Fragment(), InitLayout<VBinding>, BaseViewEvent {
-    var binding: VBinding? = null
+    protected lateinit var binding: VBinding
         private set
 
     private val baseActivity: BaseActivity<*>?
@@ -23,7 +23,7 @@ abstract class BaseFragment<VBinding : ViewBinding> : Fragment(), InitLayout<VBi
         savedInstanceState: Bundle?
     ): View? {
         binding = getViewBinding()
-        return binding?.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

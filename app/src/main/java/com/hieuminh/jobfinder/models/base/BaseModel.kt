@@ -8,7 +8,7 @@ import java.io.Serializable
 abstract class BaseModel : Serializable {
     @SerializedName("id")
     @Expose
-    val id: Int? = null
+    var id: Int? = null
 
     fun toJson(): String {
         return JsonUtils.toJson(this)
