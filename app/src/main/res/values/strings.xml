@@ -57,4 +57,7 @@
     <string name="your_province">Your province</string>
     <string name="enter_province">Enter province</string>
     <string name="input_here">Input here</string>
+    <string name="home">Home</string>
+    <string name="chat">Chat</string>
+    <string name="applications">Applications</string>
 </resources>
