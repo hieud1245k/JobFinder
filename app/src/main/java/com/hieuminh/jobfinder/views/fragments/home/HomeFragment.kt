@@ -2,22 +2,25 @@ package com.hieuminh.jobfinder.views.fragments.home
 
 import android.view.LayoutInflater
 import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import com.hieuminh.jobfinder.common.enums.TabLayoutType
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.gone
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.onClick
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.visible
 import com.hieuminh.jobfinder.databinding.FragmentHomeBinding
 import com.hieuminh.jobfinder.databinding.ItemTabViewBinding
+import com.hieuminh.jobfinder.views.adapter.HomePageAdapter
 import com.hieuminh.jobfinder.views.fragments.base.BaseFragment
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private var currentTab = TabLayoutType.HOME
+    lateinit var pageViewMap: Map<TabLayoutType, Fragment>
 
     override fun getViewBinding() = FragmentHomeBinding.inflate(layoutInflater)
 
-    private fun addTabView() {
-        TabLayoutType.values().forEachIndexed { index, tabType ->
+    private fun addTabView(tabs: List<TabLayoutType>) {
+        tabs.forEachIndexed { index, tabType ->
             val itemTabBinding = ItemTabViewBinding.inflate(LayoutInflater.from(context))
             itemTabBinding.ivTabIcon.setImageResource(tabType.iconResId)
             val layoutParam = if (currentTab == tabType) {
@@ -31,19 +34,34 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             itemTabBinding.root.onClick {
                 if (currentTab != tabType) {
                     currentTab = tabType
+                    scrollToPage(index)
                     binding.llTabLayout.removeAllViews()
-                    addTabView()
+                    addTabView(tabs)
                 }
             }
             binding.llTabLayout.addView(itemTabBinding.root)
         }
     }
 
+    private fun scrollToPage(page: Int) {
+        binding.viewPager.setCurrentItem(page, true)
+    }
+
     override fun initListener() {
     }
 
     override fun initView() {
-        addTabView()
+        pageViewMap = mapOf(
+            TabLayoutType.HOME to MainFragment(),
+            TabLayoutType.APPLICATIONS to ApplicationFragment(),
+            TabLayoutType.CHAT to MessageFragment(),
+            TabLayoutType.PROFILE to ProfileFragment(),
+        )
+        addTabView(pageViewMap.keys.toList())
+        binding.viewPager.run {
+            adapter = HomePageAdapter(pageViewMap.values.toList(), this@HomeFragment)
+            isUserInputEnabled = false
+        }
     }
 
     companion object {
