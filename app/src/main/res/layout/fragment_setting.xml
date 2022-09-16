@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.fragments.home.setting.SettingFragment">
+
+    <com.hieuminh.jobfinder.views.customs.HeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/settings" />
+
+    <com.hieuminh.jobfinder.views.customs.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/notification"
+        app:prefixIconSrc="@drawable/ic_baseline_notifications_24" />
+
+    <com.hieuminh.jobfinder.views.customs.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/security"
+        app:prefixIconSrc="@drawable/ic_baseline_lock_24" />
+
+    <com.hieuminh.jobfinder.views.customs.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appearance"
+        app:prefixIconSrc="@drawable/ic_baseline_remove_red_eye_24" />
+
+    <com.hieuminh.jobfinder.views.customs.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/help"
+        app:prefixIconSrc="@drawable/ic_baseline_info_24" />
+
+    <com.hieuminh.jobfinder.views.customs.SettingItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        app:prefixIconSrc="@drawable/ic_baseline_exit_to_app_24" />
+
+</LinearLayout>

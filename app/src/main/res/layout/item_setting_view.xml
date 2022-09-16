@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/dp_16"
-    android:paddingTop="@dimen/dp_16"
-    tools:context=".views.fragments.home.ProfileFragment">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/main_header_size"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="@dimen/main_header_size"
-            android:layout_height="match_parent"
+            android:id="@+id/iv_prefix_icon"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
             android:background="@drawable/bg_item_tab_view"
-            android:backgroundTint="@color/colorPrimary"
-            android:padding="@dimen/dp_6"
-            android:src="@drawable/ic_baseline_person_search_24" />
+            android:padding="@dimen/dp_10" />
 
         <TextView
+            android:id="@+id/tv_name"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/dp_10"
@@ -28,17 +26,21 @@
             android:gravity="center_vertical"
             android:text="@string/profile"
             android:textColor="@color/black"
-            android:textSize="@dimen/sp_20"
+            android:textSize="@dimen/sp_18"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/iv_setting"
-            android:layout_width="@dimen/main_header_size"
+            android:id="@+id/iv_suffix_icon"
+            android:layout_width="@dimen/dp_50"
             android:layout_height="match_parent"
-            android:background="@drawable/bg_item_tab_view"
-            android:padding="@dimen/dp_6"
-            android:src="@drawable/ic_baseline_settings_24" />
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/ic_baseline_chevron_right_24" />
 
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0.5"
+        android:background="@color/colorLineBar" />
 
 </LinearLayout>

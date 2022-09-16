@@ -15,4 +15,9 @@
     <declare-styleable name="EditView">
         <attr name="suffixIconSrc" format="reference|color" />
     </declare-styleable>
+
+    <declare-styleable name="SettingItemView">
+        <attr name="android:text" format="string" />
+        <attr name="prefixIconSrc" format="reference" />
+    </declare-styleable>
 </resources>

@@ -1,6 +1,7 @@
 package com.hieuminh.jobfinder.views.adapter.base
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
@@ -45,6 +46,9 @@ abstract class BaseAdapter<T> : RecyclerView.Adapter<BaseAdapter<T>.BaseViewHold
                 itemEventListener?.onItemClick(dataList[layoutPosition], layoutPosition)
             }
         }
+
+        protected val context: Context
+            get() = itemView.context
 
         abstract fun bind(data: T)
     }
