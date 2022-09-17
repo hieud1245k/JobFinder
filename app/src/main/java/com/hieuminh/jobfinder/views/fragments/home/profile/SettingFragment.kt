@@ -1,4 +1,4 @@
-package com.hieuminh.jobfinder.views.fragments.home.setting
+package com.hieuminh.jobfinder.views.fragments.home.profile
 
 import com.hieuminh.jobfinder.databinding.FragmentSettingBinding
 import com.hieuminh.jobfinder.views.fragments.base.BaseFragment

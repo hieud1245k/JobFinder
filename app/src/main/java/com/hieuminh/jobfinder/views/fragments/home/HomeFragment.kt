@@ -4,13 +4,13 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.hieuminh.jobfinder.common.enums.TabLayoutType
-import com.hieuminh.jobfinder.common.extensions.ViewExtensions.gone
+import com.hieuminh.jobfinder.common.extensions.NumberExtensions.dp
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.onClick
-import com.hieuminh.jobfinder.common.extensions.ViewExtensions.visible
 import com.hieuminh.jobfinder.databinding.FragmentHomeBinding
 import com.hieuminh.jobfinder.databinding.ItemTabViewBinding
 import com.hieuminh.jobfinder.views.adapter.HomePageAdapter
 import com.hieuminh.jobfinder.views.fragments.base.BaseFragment
+import com.hieuminh.jobfinder.views.fragments.home.profile.ProfileSettingFragment
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
@@ -29,7 +29,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             } else {
                 LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT)
             }
-            layoutParam.setMargins(if (index != 0) 24 else 0, 0, 0, 0)
+            layoutParam.setMargins(if (index != 0) 30 else 0, 0, 0, 0)
             itemTabBinding.root.layoutParams = layoutParam
             itemTabBinding.root.onClick {
                 if (currentTab != tabType) {
@@ -55,7 +55,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             TabLayoutType.HOME to MainFragment(),
             TabLayoutType.APPLICATIONS to ApplicationFragment(),
             TabLayoutType.CHAT to MessageFragment(),
-            TabLayoutType.PROFILE to ProfileFragment(),
+            TabLayoutType.PROFILE to ProfileSettingFragment(),
         )
         addTabView(pageViewMap.keys.toList())
         binding.viewPager.run {

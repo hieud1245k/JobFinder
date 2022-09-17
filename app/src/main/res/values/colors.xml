@@ -15,4 +15,6 @@
     <color name="colorTransparentPercent25">#49111111</color>
     <color name="colorLightGray">#CCCCCC</color>
     <color name="colorLineBar">#AFABA6</color>
+    <color name="colorOrangeRed">#C4EC5946</color>
+    <color name="colorLightRed">#F2FBE6E3</color>
 </resources>

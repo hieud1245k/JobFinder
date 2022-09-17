@@ -19,5 +19,7 @@
     <declare-styleable name="SettingItemView">
         <attr name="android:text" format="string" />
         <attr name="prefixIconSrc" format="reference" />
+        <attr name="prefixBackgroundTint" format="color" />
+        <attr name="hasBottomViewLine" format="boolean" />
     </declare-styleable>
 </resources>

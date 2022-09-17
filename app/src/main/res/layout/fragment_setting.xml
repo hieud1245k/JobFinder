@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.fragments.home.setting.SettingFragment">
+    tools:context=".views.fragments.home.profile.SettingFragment">
 
     <com.hieuminh.jobfinder.views.customs.HeaderView
         android:layout_width="match_parent"
@@ -40,6 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/logout"
+        app:hasBottomViewLine="false"
+        app:prefixBackgroundTint="@color/colorLightRed"
         app:prefixIconSrc="@drawable/ic_baseline_exit_to_app_24" />
 
 </LinearLayout>

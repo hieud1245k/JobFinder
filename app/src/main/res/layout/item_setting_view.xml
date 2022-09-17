@@ -39,6 +39,7 @@
     </LinearLayout>
 
     <View
+        android:id="@+id/bottom_view_line"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_0.5"
         android:background="@color/colorLineBar" />
