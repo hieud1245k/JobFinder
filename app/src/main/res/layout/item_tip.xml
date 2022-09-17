@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/dp_16"
+    android:id="@+id/ll_container"
     android:layout_marginVertical="@dimen/dp_8"
     android:background="@drawable/bg_item_tab_view"
     android:backgroundTint="@color/colorPrimary"
@@ -10,9 +11,9 @@
     android:padding="@dimen/dp_20">
 
     <TextView
+        android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How to find a perfect job for you"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_18" />
 
@@ -25,7 +26,7 @@
         android:backgroundTint="#FFC107"
         android:paddingHorizontal="@dimen/dp_20"
         android:paddingVertical="@dimen/dp_8"
-        android:text="Read more"
+        android:text="@string/read_more"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_14" />
 

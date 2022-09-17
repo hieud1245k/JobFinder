@@ -5,6 +5,13 @@ import android.os.Parcelable
 import com.hieuminh.jobfinder.models.base.BaseModel
 
 class Tip() : BaseModel(), Parcelable {
+    var title: String? = null
+    var content: String? = null
+    var authorName: String? = null
+    var authorPosition: String? = null
+    var avatarUrl: String? = null
+    var tipColor: String? = null
+
     constructor(parcel: Parcel) : this()
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

@@ -21,6 +21,7 @@ class TipAdapter : BaseAdapter<Tip>() {
         }
 
         override fun bind(data: Tip) {
+            binding.tvTitle.text = data.title
         }
     }
 }
