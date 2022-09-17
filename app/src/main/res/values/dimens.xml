@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="main_header_size">40sp</dimen>
+    <dimen name="main_header_size">40dp</dimen>
 
     <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
     <dimen name="dp_40">40dp</dimen>
     <dimen name="dp_4">4dp</dimen>
     <dimen name="dp_1">1dp</dimen>

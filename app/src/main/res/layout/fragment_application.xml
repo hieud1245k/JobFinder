@@ -1,13 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".views.fragments.home.ApplicationFragment">
 
-    <TextView
+    <com.hieuminh.jobfinder.views.customs.header.HeaderActionView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Application framgment" />
+        android:layout_height="wrap_content"
+        android:text="@string/applications"
+        app:actionIconSrc="@drawable/ic_baseline_bookmark_24" />
 
-</FrameLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        android:background="@drawable/bg_light_white_gray"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:drawableTint="@color/colorNoChat"
+        android:gravity="center_vertical"
+        android:hint="@string/search"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:paddingVertical="@dimen/dp_10"
+        android:textSize="@dimen/sp_14"
+        tools:targetApi="m" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_job_status_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_job_recommendation" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_application_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="8"
+        tools:listitem="@layout/item_application" />
+
+</LinearLayout>

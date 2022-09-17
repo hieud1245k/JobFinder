@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".SelectJobFragment">
 
-    <com.hieuminh.jobfinder.views.customs.HeaderView
+    <com.hieuminh.jobfinder.views.customs.header.HeaderView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:title="@string/what_job_you_want" />

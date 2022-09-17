@@ -1,4 +1,4 @@
-package com.hieuminh.jobfinder.views.customs
+package com.hieuminh.jobfinder.views.customs.header
 
 import android.content.Context
 import android.util.AttributeSet

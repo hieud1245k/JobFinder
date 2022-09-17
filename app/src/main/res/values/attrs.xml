@@ -22,4 +22,10 @@
         <attr name="prefixBackgroundTint" format="color" />
         <attr name="hasBottomViewLine" format="boolean" />
     </declare-styleable>
+
+    <declare-styleable name="HeaderActionView">
+        <attr name="android:text" format="string" />
+        <attr name="actionIconSrc" format="reference" />
+        <attr name="actionIconTint" format="color" />
+    </declare-styleable>
 </resources>
