@@ -4,14 +4,13 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.hieuminh.jobfinder.common.enums.TabLayoutType
-import com.hieuminh.jobfinder.common.extensions.NumberExtensions.dp
 import com.hieuminh.jobfinder.common.extensions.ViewExtensions.onClick
 import com.hieuminh.jobfinder.databinding.FragmentHomeBinding
 import com.hieuminh.jobfinder.databinding.ItemTabViewBinding
 import com.hieuminh.jobfinder.views.adapter.HomePageAdapter
 import com.hieuminh.jobfinder.views.fragments.base.BaseFragment
+import com.hieuminh.jobfinder.views.fragments.home.main.NavigatorMainFragment
 import com.hieuminh.jobfinder.views.fragments.home.profile.ProfileSettingFragment
-
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private var currentTab = TabLayoutType.HOME
@@ -52,7 +51,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     override fun initView() {
         pageViewMap = mapOf(
-            TabLayoutType.HOME to MainFragment(),
+            TabLayoutType.HOME to NavigatorMainFragment(),
             TabLayoutType.APPLICATIONS to ApplicationFragment(),
             TabLayoutType.CHAT to MessageFragment(),
             TabLayoutType.PROFILE to ProfileSettingFragment(),

@@ -71,4 +71,5 @@
     <string name="appearance">Appearance</string>
     <string name="help">Help</string>
     <string name="logout">Logout</string>
+    <string name="tip_for_you">Tip for you</string>
 </resources>

@@ -10,7 +10,7 @@
     <com.hieuminh.jobfinder.views.customs.HeaderView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="@string/what_job_you_want" />
+        android:title="@string/what_job_you_want" />
 
     <TextView
         android:layout_width="match_parent"

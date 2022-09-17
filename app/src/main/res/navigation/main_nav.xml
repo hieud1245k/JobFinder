@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.home.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_jobDetailFragment"
+            app:destination="@id/jobDetailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_tipPageFragment"
+            app:destination="@id/tipPageFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_jobSearchFragment"
+            app:destination="@id/jobSearchFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_tipDetailFragment"
+            app:destination="@id/tipDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.home.main.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/jobDetailFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.home.main.JobDetailFragment"
+        android:label="fragment_job_detail"
+        tools:layout="@layout/fragment_job_detail">
+        <argument
+            android:name="job"
+            app:argType="com.hieuminh.jobfinder.models.Job" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipPageFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.home.main.TipPageFragment"
+        android:label="fragment_tip_page"
+        tools:layout="@layout/fragment_tip_page">
+        <action
+            android:id="@+id/action_tipPageFragment_to_tipDetailFragment"
+            app:destination="@id/tipDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tipDetailFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.home.main.TipDetailFragment"
+        android:label="fragment_tip_detail"
+        tools:layout="@layout/fragment_tip_detail" />
+    <fragment
+        android:id="@+id/jobSearchFragment"
+        android:name="com.hieuminh.jobfinder.views.fragments.home.main.JobSearchFragment"
+        android:label="fragment_job_search"
+        tools:layout="@layout/fragment_job_search">
+        <action
+            android:id="@+id/action_jobSearchFragment_to_jobDetailFragment"
+            app:destination="@id/jobDetailFragment" />
+    </fragment>
+</navigation>

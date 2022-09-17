@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/dp_16"
-    tools:context=".views.fragments.home.MainFragment">
+    tools:context=".views.fragments.home.main.MainFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,6 +33,7 @@
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_notification"
             android:layout_width="@dimen/main_header_size"
             android:layout_height="match_parent"
             android:background="@drawable/bg_item_tab_view"
@@ -108,35 +109,12 @@
 
             </LinearLayout>
 
-            <LinearLayout
+            <include
+                android:id="@+id/itemTip"
+                layout="@layout/item_tip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_16"
-                android:background="@drawable/bg_item_tab_view"
-                android:backgroundTint="@color/colorPrimary"
-                android:orientation="vertical"
-                android:padding="@dimen/dp_20">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="How to find a perfect job for you"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_18" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_16"
-                    android:background="@drawable/bg_light_white_gray"
-                    android:backgroundTint="#FFC107"
-                    android:paddingHorizontal="@dimen/dp_20"
-                    android:paddingVertical="@dimen/dp_8"
-                    android:text="Read more"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_14" />
-
-            </LinearLayout>
+                android:layout_marginTop="@dimen/dp_16" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -153,7 +131,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/tv_see_job_recommendation"
+                    android:id="@+id/tv_see_jobs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/see_all"

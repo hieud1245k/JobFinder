@@ -1,4 +1,6 @@
 package com.hieuminh.jobfinder.models
 
-class Job {
+import com.hieuminh.jobfinder.models.base.BaseModel
+
+class Job : BaseModel() {
 }

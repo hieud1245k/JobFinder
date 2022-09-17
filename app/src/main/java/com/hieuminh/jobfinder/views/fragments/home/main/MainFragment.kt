@@ -1,5 +1,7 @@
-package com.hieuminh.jobfinder.views.fragments.home
+package com.hieuminh.jobfinder.views.fragments.home.main
 
+import com.hieuminh.jobfinder.common.extensions.ViewExtensions.navController
+import com.hieuminh.jobfinder.common.extensions.ViewExtensions.onClick
 import com.hieuminh.jobfinder.databinding.FragmentMainBinding
 import com.hieuminh.jobfinder.models.Job
 import com.hieuminh.jobfinder.models.Skill
@@ -15,6 +17,18 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     override fun getViewBinding() = FragmentMainBinding.inflate(layoutInflater)
 
     override fun initListener() {
+        binding.ivNotification.onClick {
+            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToNotificationFragment())
+        }
+        binding.tvSeeAllTips.onClick {
+            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToTipPageFragment())
+        }
+//        binding.tvSeeJobs.onClick {
+//            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToJobSearchFragment())
+//        }
+        binding.itemTip.root.onClick {
+            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToTipDetailFragment())
+        }
     }
 
     override fun initView() {
@@ -31,20 +45,19 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                     Skill("asdfs"),
                     Skill("asdfs"),
                     Skill("asdfs"),
-                    Skill("asdfs"),
-                    Skill("asdfs"),
-                    Skill("asdfs"),
-                    Skill("asdfs"),
-                    Skill("asdfs"),
-                    Skill("asdfs"),
-                    Skill("asdfs"),
                 )
             )
             setItemListener(skillItemListener)
         }
         binding.rvJobRecommendation.adapter = skillAdapter
 
+        val jobRecommendationItemListener = object : BaseAdapter.ItemEventListener<Job> {
+            override fun onItemClick(item: Job, position: Int) {
+//                view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToJobDetailFragment(item))
+            }
+        }
         jobAdapter = JobAdapter().apply {
+            setItemListener(jobRecommendationItemListener)
             updateData(
                 mutableListOf(
                     Job(),

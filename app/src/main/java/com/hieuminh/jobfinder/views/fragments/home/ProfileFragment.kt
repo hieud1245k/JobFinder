@@ -10,8 +10,7 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
 
     override fun initListener() {
         binding.ivSetting.setOnClickListener {
-            val settingAction = ProfileFragmentDirections.actionProfileFragment2ToSettingFragment()
-            view?.navController?.navigate(settingAction)
+            view?.navController?.navigate(ProfileFragmentDirections.actionProfileFragment2ToSettingFragment())
         }
     }
 

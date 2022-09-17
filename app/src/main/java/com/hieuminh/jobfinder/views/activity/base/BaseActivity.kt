@@ -9,7 +9,6 @@ import androidx.viewbinding.ViewBinding
 import com.hieuminh.jobfinder.R
 import com.hieuminh.jobfinder.interfaces.BaseViewEvent
 import com.hieuminh.jobfinder.interfaces.InitLayout
-import com.hieuminh.jobfinder.presenters.base.BaseView
 import com.hieuminh.jobfinder.utils.CustomActivityResult
 import com.hieuminh.jobfinder.utils.CustomActivityResult.Companion.registerActivityForResult
 
