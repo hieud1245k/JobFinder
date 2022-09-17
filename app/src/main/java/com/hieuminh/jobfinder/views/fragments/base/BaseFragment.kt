@@ -5,17 +5,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.viewbinding.ViewBinding
+import com.hieuminh.jobfinder.common.extensions.ViewExtensions.navController
 import com.hieuminh.jobfinder.interfaces.InitLayout
 import com.hieuminh.jobfinder.interfaces.BaseViewEvent
 import com.hieuminh.jobfinder.views.activity.base.BaseActivity
 
 abstract class BaseFragment<VBinding : ViewBinding> : Fragment(), InitLayout<VBinding>, BaseViewEvent {
+    private val baseActivity: BaseActivity<*>?
+        get() = activity as? BaseActivity<*>
+
     protected lateinit var binding: VBinding
         private set
 
-    private val baseActivity: BaseActivity<*>?
-        get() = activity as? BaseActivity<*>
+    protected val navController: NavController?
+        get() = view?.navController
 
     override fun onCreateView(
         inflater: LayoutInflater,

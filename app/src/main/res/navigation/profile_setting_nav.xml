@@ -12,7 +12,11 @@
         tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment2_to_settingFragment"
-            app:destination="@id/settingFragment" />
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
     </fragment>
 
     <fragment

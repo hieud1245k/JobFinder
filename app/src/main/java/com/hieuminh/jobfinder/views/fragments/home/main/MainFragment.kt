@@ -5,6 +5,7 @@ import com.hieuminh.jobfinder.common.extensions.ViewExtensions.onClick
 import com.hieuminh.jobfinder.databinding.FragmentMainBinding
 import com.hieuminh.jobfinder.models.Job
 import com.hieuminh.jobfinder.models.Skill
+import com.hieuminh.jobfinder.models.Tip
 import com.hieuminh.jobfinder.views.adapter.JobAdapter
 import com.hieuminh.jobfinder.views.adapter.SkillAdapter
 import com.hieuminh.jobfinder.views.adapter.base.BaseAdapter
@@ -13,6 +14,7 @@ import com.hieuminh.jobfinder.views.fragments.base.BaseFragment
 class MainFragment : BaseFragment<FragmentMainBinding>() {
     private lateinit var skillAdapter: SkillAdapter
     private lateinit var jobAdapter: JobAdapter
+    private val tipList = arrayOf(Tip(), Tip(), Tip(), Tip(), Tip(), Tip())
 
     override fun getViewBinding() = FragmentMainBinding.inflate(layoutInflater)
 
@@ -21,13 +23,13 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
             view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToNotificationFragment())
         }
         binding.tvSeeAllTips.onClick {
-            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToTipPageFragment())
+            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToTipPageFragment(tipList))
         }
 //        binding.tvSeeJobs.onClick {
 //            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToJobSearchFragment())
 //        }
-        binding.itemTip.root.onClick {
-            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToTipDetailFragment())
+        binding.itemTip.tvReadMore.onClick {
+            view?.navController?.navigate(MainFragmentDirections.actionMainFragmentToTipDetailFragment(tipList.first()))
         }
     }
 

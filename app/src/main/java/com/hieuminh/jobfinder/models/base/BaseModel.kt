@@ -1,5 +1,6 @@
 package com.hieuminh.jobfinder.models.base
 
+import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import com.hieuminh.jobfinder.utils.JsonUtils
